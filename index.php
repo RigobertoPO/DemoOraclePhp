@@ -9,6 +9,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function eliminar_id(id){
+            if(confirm('¿Realmente quieres eliminar?')){
+                window.location.href='eliminarBanco.php?idEliminar='+id;
+            }
+        }
+        function editar_id(id){
+            if(confirm('¿Realmente quieres editar?')){
+                window.location.href='editarBanco.php?idEditar='+id;
+            }
+        }      
+    </script>
   </head>
   <body>
     <div class="container">

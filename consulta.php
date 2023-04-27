@@ -21,6 +21,10 @@
         echo "<tr>\n";
         echo "<th>".$row['ID']."</th>";
         echo "<th>".$row['NOMBRE']."</th>";
+        echo'<td>
+        <a href="javascript:eliminar_id('. $row['ID'].')">Eliminar</a>
+        <a href="javascript:editar_id('. $row['ID'] .')">Modificar</a>
+        </td>';
         echo "</tr>\n";
         }
        echo "</table>\n";
