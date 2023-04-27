@@ -1,6 +1,8 @@
 <?php
-// Conecta al servicio XE (esto es, una base de datos) en el servidor "localhost"
-    $conn = oci_pconnect('gerente', 'unach2023', 'localhost/xepdb1', 'AL32UTF8');
+// Conecta al servicio XE (esto es, una base de datos) en el servidor "localhost
+    include 'conexion.php';
+    //$conn = oci_pconnect('gerente', 'unach2023', 'localhost/xepdb1', 'AL32UTF8');
+    $conn = oci_pconnect($usuarioBD,$passwordBD,$hostBD, 'AL32UTF8');
     if (!$conn) {
         $e = oci_error();
         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
